@@ -8,13 +8,16 @@
     "start:dev": "npx nodemon",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
-    "dev" : "ts-node-dev ./src/index.ts"
+    "dev": "ts-node-dev ./src/index.ts"
   },
   "keywords": [],
   "author": "Felipe Bartocci",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
     "nodemon": "^2.0.22",
     "rimraf": "^4.4.1",
     "ts-node": "^10.9.1",
