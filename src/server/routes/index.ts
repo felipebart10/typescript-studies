@@ -7,7 +7,7 @@ router.get("/", (_, res) => {
   return res.send("Olá, DEV");
 });
 
-router.post("/teste/", (req, res) => {
+router.post("/teste", (req, res) => {
   console.log(req.cookies);
   return res.status(StatusCodes.UNAUTHORIZED).json(req.body);
 });
