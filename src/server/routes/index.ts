@@ -7,10 +7,17 @@ router.get("/", (_, res) => {
   return res.send("Olá, DEV");
 });
 
+router.get(
+  "/cities",
+  CitiesController.getAllValidation,
+  CitiesController.getAll
+);
+
 router.post(
   "/cities",
   CitiesController.createValidation,
   CitiesController.create
 );
+
 
 export { router };
