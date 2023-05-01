@@ -6,18 +6,11 @@ const router = Router();
 router.get("/", (_, res) => {
   return res.send("Olá, DEV");
 });
-
-router.get(
-  "/cities",
-  CitiesController.getAllValidation,
-  CitiesController.getAll
-);
-
-router.post(
-  "/cities",
-  CitiesController.createValidation,
-  CitiesController.create
-);
+router.delete("/cities/:id", CitiesController.deleteByIdValidation, CitiesController.deleteById);
+router.get("/cities", CitiesController.getAllValidation, CitiesController.getAll);
+router.get("/cities/:id", CitiesController.getByIdValidation, CitiesController.getById);
+router.post("/cities", CitiesController.createValidation, CitiesController.create);
+router.put("/cities/:id", CitiesController.updateByIdValidation, CitiesController.updateById);
 
 
 export { router };
